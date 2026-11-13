@@ -83,6 +83,7 @@ nav .highlight{color:var(--gold);font-weight:700}
   margin:6px;
   border:0;
   cursor:pointer;
+  font:700 15px 'DM Sans',Arial,sans-serif;
 }
 .btn.outline{
   border:1px solid white;
@@ -225,6 +226,19 @@ nav .highlight{color:var(--gold);font-weight:700}
   background:white;
 }
 .field textarea{min-height:110px}
+.field input:focus,.field select:focus,.field textarea:focus{
+  outline:2px solid var(--teal);
+  outline-offset:2px;
+}
+.field input:invalid:not(:placeholder-shown){
+  border-color:#b83b3b;
+}
+.form-message{
+  margin:14px 6px;
+  color:#9d3030;
+  font-size:14px;
+  font-weight:700;
+}
 .foot{
   background:#041f27;
   color:#d3e5e3;
@@ -306,25 +320,21 @@ nav .highlight{color:var(--gold);font-weight:700}
              alt="Salt + Sand Boutique Resort and Mr Delicious advertisement" loading="lazy">
         <figcaption>Salt + Sand Boutique Resort / Mr Delicious</figcaption>
       </figure>
-
       <figure>
         <img src="assets/Sunrise%20Club%20Tropical%20Welcome.png"
              alt="Sunrise Club hotel, restaurant and bar advertisement" loading="lazy">
         <figcaption>Sunrise Club</figcaption>
       </figure>
-
       <figure>
         <img src="assets/Travellers%20Beach%20Resort%20Welcome%20Scene.png"
              alt="Travellers Beach Resort welcome advertisement" loading="lazy">
         <figcaption>Travellers Beach Resort</figcaption>
       </figure>
-
       <figure>
         <img src="assets/negril%20food%20shack.png"
              alt="Negril Food Shack and Juice Spot advertisement" loading="lazy">
         <figcaption>Negril Food Shack &amp; Juice Spot</figcaption>
       </figure>
-
       <figure>
         <img src="assets/current%20mood%20take%20out.png"
              alt="Current Mood bar, kitchen and blends advertisement" loading="lazy">
@@ -350,14 +360,12 @@ nav .highlight{color:var(--gold);font-weight:700}
       <p>USD per screen/month<br><strong>$180 total per screen</strong></p>
       <a class="btn" href="payment.html">Select Package</a>
     </article>
-
     <article class="package center">
       <h3>6 Months</h3>
       <div class="price">$40</div>
       <p>USD per screen/month<br><strong>$240 total per screen</strong></p>
       <a class="btn" href="payment.html">Select Package</a>
     </article>
-
     <article class="package center">
       <h3>12 Months</h3>
       <div class="price">$30</div>
@@ -400,56 +408,127 @@ nav .highlight{color:var(--gold);font-weight:700}
   <p class="intro">Tell us about your business and what you would like to advertise.</p>
 
   <div class="form-wrap">
-    <form action="https://formsubmit.co/traviscbuchanan@gmail.com" method="POST">
-      <input type="hidden" name="_subject" value="Jamaica Advertising Network Inquiry">
+    <form id="inquiry-form"
+          action="https://formsubmit.co/traviscbuchanan@gmail.com"
+          method="POST">
+
+      <input type="hidden" name="_subject"
+             value="Jamaica Advertising Network Inquiry">
       <input type="hidden" name="_captcha" value="true">
       <input type="hidden" name="_template" value="table">
+      <input type="text" name="_honey" style="display:none"
+             tabindex="-1" autocomplete="off">
 
       <div class="fields">
         <label class="field">Business name *
-          <input name="Business name" autocomplete="organization" required>
+          <input name="Business name"
+                 autocomplete="organization"
+                 placeholder="Your business name" required>
         </label>
+
         <label class="field">Owner / contact name *
-          <input name="Owner / contact name" autocomplete="name" required>
+          <input name="Owner / contact name"
+                 autocomplete="name"
+                 placeholder="Your name" required>
         </label>
+
         <label class="field full">Business address *
-          <input name="Business address" autocomplete="street-address" required>
+          <input name="Business address"
+                 autocomplete="street-address"
+                 placeholder="Business address" required>
         </label>
+
         <label class="field">Phone number *
-          <input name="Phone number" type="tel" autocomplete="tel" required>
+          <input name="Phone number"
+                 type="tel"
+                 autocomplete="tel"
+                 placeholder="Phone number" required>
         </label>
+
         <label class="field">Email address *
-          <input name="email" type="email" autocomplete="email" required>
+          <input name="email"
+                 type="email"
+                 autocomplete="email"
+                 placeholder="name@example.com" required>
         </label>
+
         <label class="field full">I'm interested in *
           <select name="Inquiry type" required>
-            <option value="" selected disabled>Select an option</option>
-            <option>Advertising</option>
-            <option>Hosting a screen</option>
-            <option>Both advertising and hosting</option>
+            <option value="" selected disabled>
+              Select an option
+            </option>
+            <option value="Advertising">Advertising</option>
+            <option value="Hosting a screen">Hosting a screen</option>
+            <option value="Both advertising and hosting">
+              Both advertising and hosting
+            </option>
           </select>
         </label>
+
         <label class="field full">Additional information
-          <textarea name="Message" rows="4"></textarea>
+          <textarea name="Message" rows="4"
+                    placeholder="Tell us about your advertising or hosting needs"></textarea>
         </label>
       </div>
-      <button class="btn" type="submit">Send Inquiry</button>
+
+      <p id="form-message" class="form-message"
+         role="alert" aria-live="polite" hidden></p>
+
+      <button class="btn" type="submit" id="send-inquiry">
+        Send Inquiry
+      </button>
     </form>
   </div>
 </section>
 
 <section class="hero" style="padding:65px 20px">
-  <h2 style="font-size:clamp(30px,4vw,48px)">Ready to Advertise?</h2>
+  <h2 style="font-size:clamp(30px,4vw,48px)">
+    Ready to Advertise?
+  </h2>
   <p>Choose your package and continue to our payment page.</p>
-  <a class="btn" href="payment.html">View Packages &amp; Payments</a>
+  <a class="btn" href="payment.html">
+    View Packages &amp; Payments
+  </a>
 </section>
 
 </main>
 
 <footer class="foot">
-  © 2026 Halifax Virtual Media Masters &amp; Events Ltd. · Jamaica Advertising Network ·
+  © 2026 Halifax Virtual Media Masters &amp; Events Ltd.
+  · Jamaica Advertising Network ·
   <a href="payment.html">Advertising Packages &amp; Payments</a>
 </footer>
+
+<script>
+(function(){
+  const form = document.getElementById('inquiry-form');
+  const message = document.getElementById('form-message');
+  const button = document.getElementById('send-inquiry');
+
+  if (!form || !message || !button) return;
+
+  form.addEventListener('invalid', function(event){
+    const field = event.target;
+    message.hidden = false;
+    message.textContent =
+      'Please complete all required fields, including the inquiry type, and enter a valid email address.';
+  }, true);
+
+  form.addEventListener('input', function(){
+    message.hidden = true;
+  });
+
+  form.addEventListener('change', function(){
+    message.hidden = true;
+  });
+
+  form.addEventListener('submit', function(){
+    message.hidden = true;
+    button.textContent = 'Sending Inquiry...';
+    button.disabled = true;
+  });
+})();
+</script>
 
 </body>
 </html>
