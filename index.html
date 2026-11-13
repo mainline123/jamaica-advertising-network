@@ -210,11 +210,12 @@ nav{justify-content:center;gap:15px}
 
 <div class="form-wrap">
 
-<form action="https://formsubmit.co/288b659646c8f0fd5c04934a3aed9386" method="POST">
+<form id="inquiry-form" action="https://api.web3forms.com/submit" method="POST">
 
-<input type="hidden" name="_subject" value="Jamaica Advertising Network Inquiry">
-<input type="hidden" name="_captcha" value="true">
-<input type="hidden" name="_template" value="table">
+<input type="hidden" name="access_key" value="1c442771-1a55-4db1-b1cd-6976c0d45d28">
+<input type="hidden" name="subject" value="Jamaica Advertising Network Inquiry">
+<input type="hidden" name="from_name" value="Jamaica Advertising Network Website">
+<input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off">
 
 <div class="fields">
 <label class="field">Business name *
@@ -251,7 +252,8 @@ nav{justify-content:center;gap:15px}
 </label>
 </div>
 
-<button class="btn" type="submit">Send Inquiry</button>
+<button class="btn" id="inquiry-submit" type="submit">Send Inquiry</button>
+<p id="inquiry-status" role="status" aria-live="polite" style="margin:14px 0 0;line-height:1.6" hidden></p>
 </form>
 </div>
 </section>
@@ -269,5 +271,41 @@ nav{justify-content:center;gap:15px}
 <a href="payment.html">Advertising Packages &amp; Payments</a>
 </footer>
 
+<script>
+(function () {
+  const form = document.getElementById('inquiry-form');
+  const button = document.getElementById('inquiry-submit');
+  const status = document.getElementById('inquiry-status');
+  form.addEventListener('submit', async function (event) {
+    event.preventDefault();
+    if (!form.reportValidity()) return;
+    button.disabled = true;
+    button.textContent = 'Sending...';
+    status.hidden = false;
+    status.style.color = '#173139';
+    status.textContent = 'Submitting your inquiry...';
+    try {
+      const response = await fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { 'Accept': 'application/json' }
+      });
+      const result = await response.json();
+      if (!response.ok || !result.success) {
+        throw new Error(result.message || 'The inquiry could not be sent.');
+      }
+      status.style.color = '#17633c';
+      status.textContent = 'Thank you! Your inquiry has been submitted successfully. We will be in touch soon.';
+      form.reset();
+    } catch (error) {
+      status.style.color = '#a12b2b';
+      status.textContent = 'Your inquiry could not be sent. Please try again shortly. ' + (error.message || '');
+    } finally {
+      button.disabled = false;
+      button.textContent = 'Send Inquiry';
+    }
+  });
+})();
+</script>
 </body>
 </html>
