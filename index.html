@@ -8,527 +8,266 @@
 <meta name="description" content="Digital advertising opportunities in Negril, Montego Bay and Ocho Rios, Jamaica.">
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
 <style>
-:root{
-  --navy:#062c35;
-  --teal:#087278;
-  --gold:#eac36d;
-  --cream:#faf8f2;
-  --ink:#173139;
-}
+:root{--navy:#062c35;--teal:#087278;--gold:#eac36d;--cream:#faf8f2;--ink:#173139}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{
-  margin:0;
-  font-family:'DM Sans',Arial,sans-serif;
-  color:var(--ink);
-  background:var(--cream);
-}
+body{margin:0;font-family:'DM Sans',Arial,sans-serif;color:var(--ink);background:var(--cream)}
 a{color:inherit}
 h1,h2,h3{font-family:'Playfair Display',Georgia,serif}
-header{
-  background:var(--navy);
-  color:white;
-  padding:12px 5%;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap:24px;
-}
-header img{
-  display:block;
-  width:205px;
-  height:94px;
-  object-fit:contain;
-  background:white;
-  border-radius:5px;
-}
+header{background:var(--navy);color:white;padding:12px 5%;display:flex;align-items:center;justify-content:space-between;gap:24px}
+header img{display:block;width:205px;height:94px;object-fit:contain;background:white;border-radius:5px}
 nav{display:flex;flex-wrap:wrap;gap:23px}
 nav a{text-decoration:none;font-size:14px}
 nav .highlight{color:var(--gold);font-weight:700}
-.hero{
-  background:linear-gradient(120deg,#062c35ee,#087278d9),
-    radial-gradient(circle at 85% 0%,#6cd5ce,transparent 50%);
-  padding:105px 20px;
-  color:white;
-  text-align:center;
-}
-.eyebrow{
-  font-size:12px;
-  font-weight:700;
-  letter-spacing:.18em;
-  text-transform:uppercase;
-  color:var(--gold);
-}
-.hero h1{
-  font-size:clamp(39px,6vw,75px);
-  line-height:1.12;
-  max-width:950px;
-  margin:20px auto;
-}
+.hero{background:linear-gradient(120deg,#062c35ee,#087278d9),radial-gradient(circle at 85% 0%,#6cd5ce,transparent 50%);padding:105px 20px;color:white;text-align:center}
+.eyebrow{font-size:12px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--gold)}
+.hero h1{font-size:clamp(39px,6vw,75px);line-height:1.12;max-width:950px;margin:20px auto}
 .hero h1 span{color:var(--gold)}
-.hero p{
-  max-width:700px;
-  margin:0 auto 30px;
-  line-height:1.7;
-  font-size:19px;
-}
-.btn{
-  display:inline-block;
-  padding:14px 24px;
-  border-radius:30px;
-  background:var(--gold);
-  color:#172c31;
-  text-decoration:none;
-  font-weight:700;
-  margin:6px;
-  border:0;
-  cursor:pointer;
-  font:700 15px 'DM Sans',Arial,sans-serif;
-}
-.btn.outline{
-  border:1px solid white;
-  color:white;
-  background:transparent;
-}
-.section{
-  max-width:1220px;
-  margin:auto;
-  padding:70px 22px;
-}
-.section h2{
-  font-size:clamp(32px,4vw,49px);
-  text-align:center;
-  margin:12px 0;
-}
-.intro{
-  max-width:790px;
-  margin:0 auto 35px;
-  text-align:center;
-  line-height:1.75;
-  color:#53696d;
-}
+.hero p{max-width:700px;margin:0 auto 30px;line-height:1.7;font-size:19px}
+.btn{display:inline-block;padding:14px 24px;border-radius:30px;background:var(--gold);color:#172c31;text-decoration:none;font-weight:700;margin:6px;border:0;cursor:pointer}
+.btn.outline{border:1px solid white;color:white;background:transparent}
+.section{max-width:1220px;margin:auto;padding:70px 22px}
+.section h2{font-size:clamp(32px,4vw,49px);text-align:center;margin:12px 0}
+.intro{max-width:790px;margin:0 auto 35px;text-align:center;line-height:1.75;color:#53696d}
 .center{text-align:center}
-.destinations,.packages,.features{
-  display:grid;
-  grid-template-columns:repeat(3,minmax(0,1fr));
-  gap:20px;
-}
-.tile,.package,.feature{
-  background:white;
-  border:1px solid #dbe6e2;
-  border-radius:16px;
-  padding:26px;
-  box-shadow:0 8px 30px #003b4210;
-}
+.destinations,.packages,.features{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.tile,.package,.feature{background:white;border:1px solid #dbe6e2;border-radius:16px;padding:26px;box-shadow:0 8px 30px #003b4210}
 .tile h3,.package h3{font-size:28px;margin:0 0 10px}
-.tile p,.package p,.feature p{
-  line-height:1.7;
-  color:#53696d;
-}
-.tile .link{
-  color:#087278;
-  font-weight:700;
-  text-decoration:none;
-}
-.gallery{
-  display:grid;
-  grid-template-columns:repeat(2,minmax(0,1fr));
-  gap:24px;
-}
-.gallery figure{
-  margin:0;
-  background:white;
-  border:1px solid #dbe6e2;
-  border-radius:16px;
-  overflow:hidden;
-  box-shadow:0 10px 32px #003b4213;
-}
-.gallery img{
-  display:block;
-  width:100%;
-  aspect-ratio:16/9;
-  object-fit:contain;
-  background:#e6f1ed;
-}
-.gallery figcaption{
-  padding:16px 20px;
-  font-weight:700;
-}
-.gallery figure:last-child{
-  grid-column:1/-1;
-  max-width:650px;
-  justify-self:center;
-  width:100%;
-}
+.tile p,.package p,.feature p{line-height:1.7;color:#53696d}
+.tile .link{color:#087278;font-weight:700;text-decoration:none}
+.gallery{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}
+.gallery figure{margin:0;background:white;border:1px solid #dbe6e2;border-radius:16px;overflow:hidden;box-shadow:0 10px 32px #003b4213}
+.gallery img{display:block;width:100%;aspect-ratio:16/9;object-fit:contain;background:#e6f1ed}
+.gallery figcaption{padding:16px 20px;font-weight:700}
+.gallery figure:last-child{grid-column:1/-1;max-width:650px;justify-self:center;width:100%}
 .band{background:#e8f4f1}
 .price{font-size:39px;font-weight:700}
-.discount{
-  margin:28px 0 0;
-  background:#e9f5f2;
-  border-radius:16px;
-  padding:28px;
-  text-align:center;
-}
+.discount{margin:28px 0 0;background:#e9f5f2;border-radius:16px;padding:28px;text-align:center}
 .discount h3{font-size:28px;margin:0 0 12px}
 .discount p{line-height:1.7}
-.host{
-  background:linear-gradient(110deg,#06343d,#087b7b);
-  color:white;
-}
-.host-inner{
-  max-width:1220px;
-  margin:auto;
-  padding:70px 22px;
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:30px;
-  align-items:center;
-}
+.host{background:linear-gradient(110deg,#06343d,#087b7b);color:white}
+.host-inner{max-width:1220px;margin:auto;padding:70px 22px;display:grid;grid-template-columns:1fr 1fr;gap:30px;align-items:center}
 .host h2{font-size:42px}
 .host p{line-height:1.75}
 .shares{display:flex;gap:15px}
-.share{
-  background:var(--gold);
-  color:#152c32;
-  border-radius:14px;
-  padding:22px;
-  flex:1;
-  text-align:center;
-}
+.share{background:var(--gold);color:#152c32;border-radius:14px;padding:22px;flex:1;text-align:center}
 .share strong{font-size:43px;display:block}
-.form-wrap{
-  max-width:920px;
-  margin:auto;
-  background:white;
-  border:1px solid #dbe6e2;
-  border-radius:16px;
-  padding:30px;
-}
-.fields{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:18px;
-}
-.field{
-  display:flex;
-  flex-direction:column;
-  gap:8px;
-  font-size:14px;
-  font-weight:700;
-}
+.form-wrap{max-width:920px;margin:auto;background:white;border:1px solid #dbe6e2;border-radius:16px;padding:30px}
+.fields{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.field{display:flex;flex-direction:column;gap:8px;font-size:14px;font-weight:700}
 .full{grid-column:1/-1}
-.field input,.field select,.field textarea{
-  font:inherit;
-  padding:13px;
-  border:1px solid #b9ccca;
-  border-radius:8px;
-  width:100%;
-  background:white;
-}
+.field input,.field select,.field textarea{font:inherit;padding:13px;border:1px solid #b9ccca;border-radius:8px;width:100%;background:white}
 .field textarea{min-height:110px}
-.field input:focus,.field select:focus,.field textarea:focus{
-  outline:2px solid var(--teal);
-  outline-offset:2px;
-}
-.field input:invalid:not(:placeholder-shown){
-  border-color:#b83b3b;
-}
-.form-message{
-  margin:14px 6px;
-  color:#9d3030;
-  font-size:14px;
-  font-weight:700;
-}
-.foot{
-  background:#041f27;
-  color:#d3e5e3;
-  padding:28px 5%;
-  font-size:13px;
-  text-align:center;
-}
+.foot{background:#041f27;color:#d3e5e3;padding:28px 5%;font-size:13px;text-align:center}
 .foot a{color:var(--gold)}
 @media(max-width:800px){
-  header{flex-direction:column}
-  nav{justify-content:center;gap:15px}
-  .destinations,.packages,.features,.gallery,.host-inner,.fields{
-    grid-template-columns:1fr;
-  }
-  .gallery figure:last-child{grid-column:auto}
-  .shares{flex-direction:column}
-  .hero{padding:70px 20px}
-  .section{padding:50px 18px}
+header{flex-direction:column}
+nav{justify-content:center;gap:15px}
+.destinations,.packages,.features,.gallery,.host-inner,.fields{grid-template-columns:1fr}
+.gallery figure:last-child{grid-column:auto}
+.shares{flex-direction:column}
+.hero{padding:70px 20px}
+.section{padding:50px 18px}
 }
 </style>
 </head>
 <body>
 
 <header>
-  <a href="index.html">
-    <img src="assets/Halifax%20Virtual%20Media%20Masters%20Logo.png"
-         alt="Official Halifax Virtual Media Masters & Events Ltd. logo">
-  </a>
-  <nav>
-    <a href="#locations">Destinations</a>
-    <a href="#negril-businesses">Negril Businesses</a>
-    <a href="#packages">Packages</a>
-    <a class="highlight" href="payment.html">Payments</a>
-    <a href="#host">Become a Host</a>
-    <a href="#contact">Contact</a>
-  </nav>
+<a href="index.html"><img src="assets/Halifax%20Virtual%20Media%20Masters%20Logo.png" alt="Official Halifax Virtual Media Masters & Events Ltd. logo"></a>
+<nav>
+<a href="#locations">Destinations</a>
+<a href="#negril-businesses">Negril Businesses</a>
+<a href="#packages">Packages</a>
+<a class="highlight" href="payment.html">Payments</a>
+<a href="#host">Become a Host</a>
+<a href="#contact">Contact</a>
+</nav>
 </header>
 
 <main>
 
 <section class="hero">
-  <div class="eyebrow">Jamaica Advertising Network</div>
-  <h1>Your Business. Our Network.<br><span>All Across Jamaica.</span></h1>
-  <p>Connect with visitors and local customers through engaging digital advertising in tourism and commercial settings across Jamaica.</p>
-  <a class="btn" href="payment.html">Explore Advertising Packages</a>
-  <a class="btn outline" href="#negril-businesses">See Featured Negril Businesses</a>
+<div class="eyebrow">Jamaica Advertising Network</div>
+<h1>Your Business. Our Network.<br><span>All Across Jamaica.</span></h1>
+<p>Connect with visitors and local customers through engaging digital advertising in tourism and commercial settings across Jamaica.</p>
+<a class="btn" href="payment.html">Explore Advertising Packages</a>
+<a class="btn outline" href="#negril-businesses">See Featured Negril Businesses</a>
 </section>
 
 <section class="section" id="locations">
-  <div class="eyebrow center">Our Destinations</div>
-  <h2>Discover Jamaica's Advertising Opportunities</h2>
-  <p class="intro">Explore opportunities in Negril, Montego Bay and Ocho Rios. Contact us to confirm screen availability and locations.</p>
-  <div class="destinations">
-    <article class="tile">
-      <h3>Negril</h3>
-      <p>Discover businesses and hospitality destinations featured in our Negril advertising creative.</p>
-      <a class="link" href="#negril-businesses">View Negril Businesses</a>
-    </article>
-    <article class="tile">
-      <h3>Montego Bay</h3>
-      <p>Promote your business to residents and visitors in one of Jamaica's major tourism centres.</p>
-    </article>
-    <article class="tile">
-      <h3>Ocho Rios</h3>
-      <p>Reach audiences interested in attractions, tours, hospitality, dining and shopping.</p>
-    </article>
-  </div>
+<div class="eyebrow center">Our Destinations</div>
+<h2>Discover Jamaica's Advertising Opportunities</h2>
+<p class="intro">Explore opportunities in Negril, Montego Bay and Ocho Rios. Contact us to confirm screen availability and locations.</p>
+<div class="destinations">
+<article class="tile">
+<h3>Negril</h3>
+<p>Discover businesses and hospitality destinations featured in our Negril advertising creative.</p>
+<a class="link" href="#negril-businesses">View Negril Businesses</a>
+</article>
+<article class="tile">
+<h3>Montego Bay</h3>
+<p>Promote your business to residents and visitors in one of Jamaica's major tourism centres.</p>
+</article>
+<article class="tile">
+<h3>Ocho Rios</h3>
+<p>Reach audiences interested in attractions, tours, hospitality, dining and shopping.</p>
+</article>
+</div>
 </section>
 
 <section class="band" id="negril-businesses">
-  <div class="section">
-    <div class="eyebrow center">Featured Negril Businesses</div>
-    <h2>Discover Negril</h2>
-    <p class="intro">A showcase of advertising creative featuring Negril's hospitality, dining and local businesses.</p>
+<div class="section">
+<div class="eyebrow center">Featured Negril Businesses</div>
+<h2>Discover Negril</h2>
+<p class="intro">A showcase of advertising creative featuring Negril's hospitality, dining and local businesses.</p>
+<div class="gallery">
 
-    <div class="gallery">
-      <figure>
-        <img src="assets/welcome%20to%20salt%20and%20sand.png"
-             alt="Salt + Sand Boutique Resort and Mr Delicious advertisement" loading="lazy">
-        <figcaption>Salt + Sand Boutique Resort / Mr Delicious</figcaption>
-      </figure>
-      <figure>
-        <img src="assets/Sunrise%20Club%20Tropical%20Welcome.png"
-             alt="Sunrise Club hotel, restaurant and bar advertisement" loading="lazy">
-        <figcaption>Sunrise Club</figcaption>
-      </figure>
-      <figure>
-        <img src="assets/Travellers%20Beach%20Resort%20Welcome%20Scene.png"
-             alt="Travellers Beach Resort welcome advertisement" loading="lazy">
-        <figcaption>Travellers Beach Resort</figcaption>
-      </figure>
-      <figure>
-        <img src="assets/negril%20food%20shack.png"
-             alt="Negril Food Shack and Juice Spot advertisement" loading="lazy">
-        <figcaption>Negril Food Shack &amp; Juice Spot</figcaption>
-      </figure>
-      <figure>
-        <img src="assets/current%20mood%20take%20out.png"
-             alt="Current Mood bar, kitchen and blends advertisement" loading="lazy">
-        <figcaption>Current Mood — Bar, Kitchen &amp; Blends</figcaption>
-      </figure>
-    </div>
+<figure>
+<img src="assets/welcome%20to%20salt%20and%20sand.png" alt="Salt + Sand Boutique Resort and Mr Delicious advertisement" loading="lazy">
+<figcaption>Salt + Sand Boutique Resort / Mr Delicious</figcaption>
+</figure>
 
-    <p class="intro" style="margin-top:25px">
-      These are examples of supplied advertising artwork; inclusion does not imply a particular screen placement or endorsement.
-    </p>
-  </div>
+<figure>
+<img src="assets/Sunrise%20Club%20Tropical%20Welcome.png" alt="Sunrise Club advertisement" loading="lazy">
+<figcaption>Sunrise Club</figcaption>
+</figure>
+
+<figure>
+<img src="assets/Travellers%20Beach%20Resort%20Welcome%20Scene.png" alt="Travellers Beach Resort welcome advertisement" loading="lazy">
+<figcaption>Travellers Beach Resort</figcaption>
+</figure>
+
+<figure>
+<img src="assets/negril%20food%20shack.png" alt="Negril Food Shack and Juice Spot advertisement" loading="lazy">
+<figcaption>Negril Food Shack &amp; Juice Spot</figcaption>
+</figure>
+
+<figure>
+<img src="assets/current%20mood%20take%20out.png" alt="Current Mood advertisement" loading="lazy">
+<figcaption>Current Mood — Bar, Kitchen &amp; Blends</figcaption>
+</figure>
+
+</div>
+<p class="intro" style="margin-top:25px">These are examples of supplied advertising artwork; inclusion does not imply a particular screen placement or endorsement.</p>
+</div>
 </section>
 
 <section class="section" id="packages">
-  <div class="eyebrow center">Advertising Packages</div>
-  <h2>Simple, Flexible Pricing</h2>
-  <p class="intro">Choose your advertising term and number of screens. All amounts are in USD and billed upfront for the full term.</p>
+<div class="eyebrow center">Advertising Packages</div>
+<h2>Simple, Flexible Pricing</h2>
+<p class="intro">Choose your advertising term and number of screens. All amounts are in USD and billed upfront for the full term.</p>
 
-  <div class="packages">
-    <article class="package center">
-      <h3>3 Months</h3>
-      <div class="price">$60</div>
-      <p>USD per screen/month<br><strong>$180 total per screen</strong></p>
-      <a class="btn" href="payment.html">Select Package</a>
-    </article>
-    <article class="package center">
-      <h3>6 Months</h3>
-      <div class="price">$40</div>
-      <p>USD per screen/month<br><strong>$240 total per screen</strong></p>
-      <a class="btn" href="payment.html">Select Package</a>
-    </article>
-    <article class="package center">
-      <h3>12 Months</h3>
-      <div class="price">$30</div>
-      <p>USD per screen/month<br><strong>$360 total per screen</strong></p>
-      <a class="btn" href="payment.html">Select Package</a>
-    </article>
-  </div>
+<div class="packages">
+<article class="package center">
+<h3>3 Months</h3>
+<div class="price">$60</div>
+<p>USD per screen/month<br><strong>$180 total per screen</strong></p>
+<a class="btn" href="payment.html">Select Package</a>
+</article>
 
-  <div class="discount">
-    <h3>Advertise on 5 or 10 Screens</h3>
-    <p>Receive an additional <strong>10% discount</strong> when choosing a 5-screen or 10-screen package, subject to availability.</p>
-    <a class="btn" href="payment.html">Choose Screens &amp; Checkout</a>
-  </div>
+<article class="package center">
+<h3>6 Months</h3>
+<div class="price">$40</div>
+<p>USD per screen/month<br><strong>$240 total per screen</strong></p>
+<a class="btn" href="payment.html">Select Package</a>
+</article>
+
+<article class="package center">
+<h3>12 Months</h3>
+<div class="price">$30</div>
+<p>USD per screen/month<br><strong>$360 total per screen</strong></p>
+<a class="btn" href="payment.html">Select Package</a>
+</article>
+</div>
+
+<div class="discount">
+<h3>Advertise on 5 or 10 Screens</h3>
+<p>Receive an additional <strong>10% discount</strong> when choosing a 5-screen or 10-screen package, subject to availability.</p>
+<a class="btn" href="payment.html">Choose Screens &amp; Checkout</a>
+</div>
 </section>
 
 <section class="host" id="host">
-  <div class="host-inner">
-    <div>
-      <div class="eyebrow">Partnership Opportunities</div>
-      <h2>Become a Screen Host</h2>
-      <p>Partner with Halifax Virtual Media Masters &amp; Events Ltd. and earn a share of qualifying advertising and QR referral revenue under our established host terms.</p>
-      <a class="btn" href="#contact">Contact Us About Hosting</a>
-    </div>
-    <div class="shares">
-      <div class="share">
-        <strong>25%</strong>
-        Advertising revenue share
-      </div>
-      <div class="share">
-        <strong>50%</strong>
-        QR referral commission share
-      </div>
-    </div>
-  </div>
+<div class="host-inner">
+<div>
+<div class="eyebrow">Partnership Opportunities</div>
+<h2>Become a Screen Host</h2>
+<p>Partner with Halifax Virtual Media Masters &amp; Events Ltd. and earn a share of qualifying advertising and QR referral revenue under our established host terms.</p>
+<a class="btn" href="#contact">Contact Us About Hosting</a>
+</div>
+<div class="shares">
+<div class="share"><strong>25%</strong>Advertising revenue share</div>
+<div class="share"><strong>50%</strong>QR referral commission share</div>
+</div>
+</div>
 </section>
 
 <section class="section" id="contact">
-  <div class="eyebrow center">Get in Touch</div>
-  <h2>Advertising &amp; Hosting Inquiries</h2>
-  <p class="intro">Tell us about your business and what you would like to advertise.</p>
+<div class="eyebrow center">Get in Touch</div>
+<h2>Advertising &amp; Hosting Inquiries</h2>
+<p class="intro">Tell us about your business and what you would like to advertise.</p>
 
-  <div class="form-wrap">
-    <form id="inquiry-form"
-          action="https://formsubmit.co/traviscbuchanan@gmail.com"
-          method="POST">
+<div class="form-wrap">
 
-      <input type="hidden" name="_subject"
-             value="Jamaica Advertising Network Inquiry">
-      <input type="hidden" name="_captcha" value="true">
-      <input type="hidden" name="_template" value="table">
-      <input type="text" name="_honey" style="display:none"
-             tabindex="-1" autocomplete="off">
+<form action="https://formsubmit.co/288b659646c8f0fd5c04934a3aed9386" method="POST">
 
-      <div class="fields">
-        <label class="field">Business name *
-          <input name="Business name"
-                 autocomplete="organization"
-                 placeholder="Your business name" required>
-        </label>
+<input type="hidden" name="_subject" value="Jamaica Advertising Network Inquiry">
+<input type="hidden" name="_captcha" value="true">
+<input type="hidden" name="_template" value="table">
 
-        <label class="field">Owner / contact name *
-          <input name="Owner / contact name"
-                 autocomplete="name"
-                 placeholder="Your name" required>
-        </label>
+<div class="fields">
+<label class="field">Business name *
+<input name="Business name" autocomplete="organization" required>
+</label>
 
-        <label class="field full">Business address *
-          <input name="Business address"
-                 autocomplete="street-address"
-                 placeholder="Business address" required>
-        </label>
+<label class="field">Owner / contact name *
+<input name="Owner / contact name" autocomplete="name" required>
+</label>
 
-        <label class="field">Phone number *
-          <input name="Phone number"
-                 type="tel"
-                 autocomplete="tel"
-                 placeholder="Phone number" required>
-        </label>
+<label class="field full">Business address *
+<input name="Business address" autocomplete="street-address" required>
+</label>
 
-        <label class="field">Email address *
-          <input name="email"
-                 type="email"
-                 autocomplete="email"
-                 placeholder="name@example.com" required>
-        </label>
+<label class="field">Phone number *
+<input name="Phone number" type="tel" autocomplete="tel" required>
+</label>
 
-        <label class="field full">I'm interested in *
-          <select name="Inquiry type" required>
-            <option value="" selected disabled>
-              Select an option
-            </option>
-            <option value="Advertising">Advertising</option>
-            <option value="Hosting a screen">Hosting a screen</option>
-            <option value="Both advertising and hosting">
-              Both advertising and hosting
-            </option>
-          </select>
-        </label>
+<label class="field">Email address *
+<input name="email" type="email" autocomplete="email" required>
+</label>
 
-        <label class="field full">Additional information
-          <textarea name="Message" rows="4"
-                    placeholder="Tell us about your advertising or hosting needs"></textarea>
-        </label>
-      </div>
+<label class="field full">I'm interested in *
+<select name="Inquiry type" required>
+<option value="" selected disabled>Select an option</option>
+<option>Advertising</option>
+<option>Hosting a screen</option>
+<option>Both advertising and hosting</option>
+</select>
+</label>
 
-      <p id="form-message" class="form-message"
-         role="alert" aria-live="polite" hidden></p>
+<label class="field full">Additional information
+<textarea name="Message" rows="4"></textarea>
+</label>
+</div>
 
-      <button class="btn" type="submit" id="send-inquiry">
-        Send Inquiry
-      </button>
-    </form>
-  </div>
+<button class="btn" type="submit">Send Inquiry</button>
+</form>
+</div>
 </section>
 
 <section class="hero" style="padding:65px 20px">
-  <h2 style="font-size:clamp(30px,4vw,48px)">
-    Ready to Advertise?
-  </h2>
-  <p>Choose your package and continue to our payment page.</p>
-  <a class="btn" href="payment.html">
-    View Packages &amp; Payments
-  </a>
+<h2 style="font-size:clamp(30px,4vw,48px)">Ready to Advertise?</h2>
+<p>Choose your package and continue to our payment page.</p>
+<a class="btn" href="payment.html">View Packages &amp; Payments</a>
 </section>
 
 </main>
 
 <footer class="foot">
-  © 2026 Halifax Virtual Media Masters &amp; Events Ltd.
-  · Jamaica Advertising Network ·
-  <a href="payment.html">Advertising Packages &amp; Payments</a>
+© 2026 Halifax Virtual Media Masters &amp; Events Ltd. · Jamaica Advertising Network ·
+<a href="payment.html">Advertising Packages &amp; Payments</a>
 </footer>
-
-<script>
-(function(){
-  const form = document.getElementById('inquiry-form');
-  const message = document.getElementById('form-message');
-  const button = document.getElementById('send-inquiry');
-
-  if (!form || !message || !button) return;
-
-  form.addEventListener('invalid', function(event){
-    const field = event.target;
-    message.hidden = false;
-    message.textContent =
-      'Please complete all required fields, including the inquiry type, and enter a valid email address.';
-  }, true);
-
-  form.addEventListener('input', function(){
-    message.hidden = true;
-  });
-
-  form.addEventListener('change', function(){
-    message.hidden = true;
-  });
-
-  form.addEventListener('submit', function(){
-    message.hidden = true;
-    button.textContent = 'Sending Inquiry...';
-    button.disabled = true;
-  });
-})();
-</script>
 
 </body>
 </html>
