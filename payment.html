@@ -4,10 +4,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-
 <title>Advertiser Payments | Jamaica Advertising Network</title>
 <meta name="description" content="Choose your Jamaica Advertising Network advertising package and payment method.">
-
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
@@ -30,8 +28,6 @@ body {
   color:var(--ink);
 }
 a {color:inherit}
-
-/* Header */
 header {
   background:var(--deep);
   color:white;
@@ -58,8 +54,6 @@ header {
   width:100%;
   height:100%;
   object-fit:contain;
-  position:static;
-  transform:none;
 }
 nav {
   display:flex;
@@ -74,8 +68,6 @@ nav a {
   white-space:nowrap;
 }
 nav a:hover {color:var(--gold)}
-
-/* Hero */
 .hero {
   background:
     linear-gradient(120deg,rgba(3,38,49,.94),rgba(4,91,97,.84)),
@@ -103,8 +95,6 @@ nav a:hover {color:var(--gold)}
   line-height:1.65;
   color:#e1efee;
 }
-
-/* Layout */
 .wrap {
   max-width:1120px;
   margin:auto;
@@ -122,8 +112,6 @@ h2 {
   color:#4e6568;
   line-height:1.7;
 }
-
-/* Packages */
 .plans {
   display:grid;
   grid-template-columns:repeat(3,minmax(0,1fr));
@@ -183,8 +171,6 @@ h2 {
   margin-top:19px;
 }
 .plan button:hover,.action:hover {background:#f6d992}
-
-/* Customer information */
 .panel {
   background:white;
   border:1px solid var(--line);
@@ -227,8 +213,6 @@ h2 {
   width:100%;
 }
 .full {grid-column:1/-1}
-
-/* Payment methods */
 .methods {
   display:grid;
   grid-template-columns:1fr 1fr;
@@ -273,8 +257,6 @@ h2 {
   font-size:13px;
 }
 .footer a {color:var(--gold)}
-
-/* Mobile */
 @media(max-width:780px) {
   header {
     flex-direction:column;
@@ -327,7 +309,6 @@ h2 {
 
 <main>
 <section class="wrap" id="packages">
-
   <h2>Choose Your Advertising Package</h2>
   <p class="intro">
     All packages are billed upfront for the full advertising term.
@@ -342,9 +323,7 @@ h2 {
       <div class="price">$60 <small>USD / month</small></div>
       <div class="total">$180 USD total</div>
       <p class="muted">One upfront payment for 3 months</p>
-      <button type="button" onclick="choose(3)">
-        Select 3 Months
-      </button>
+      <button type="button" onclick="choose(3)">Select 3 Months</button>
     </article>
 
     <article class="plan featured">
@@ -353,9 +332,7 @@ h2 {
       <div class="price">$40 <small>USD / month</small></div>
       <div class="total">$240 USD total</div>
       <p class="muted">One upfront payment for 6 months</p>
-      <button type="button" onclick="choose(6)">
-        Select 6 Months
-      </button>
+      <button type="button" onclick="choose(6)">Select 6 Months</button>
     </article>
 
     <article class="plan">
@@ -364,9 +341,7 @@ h2 {
       <div class="price">$30 <small>USD / month</small></div>
       <div class="total">$360 USD total</div>
       <p class="muted">One upfront payment for 12 months</p>
-      <button type="button" onclick="choose(12)">
-        Select 12 Months
-      </button>
+      <button type="button" onclick="choose(12)">Select 12 Months</button>
     </article>
   </div>
 
@@ -396,7 +371,7 @@ h2 {
       onsubmit="return prepareInquiry(event)">
 
       <input type="hidden" name="_subject" id="form-subject"
-        value="Jamaica Advertising Network - BMO Transfer Request">
+        value="Jamaica Advertising Network - Payment Request">
       <input type="hidden" name="_captcha" value="true">
       <input type="hidden" name="_template" value="table">
 
@@ -444,29 +419,20 @@ h2 {
       </div>
 
       <div class="methods">
-
         <div class="method">
           <h3>Pay with PayPal</h3>
           <p>
-            Send your package payment in <strong>USD</strong> to
-            <strong>mainlinetrading@hotmail.com</strong>.
-            Verify the recipient before confirming payment.
+            Prefer PayPal? Submit your business details and
+            selected advertising package to request secure
+            PayPal payment instructions.
           </p>
-
-          <div class="buttons">
-            <a class="action" href="https://www.paypal.com/"
-              target="_blank" rel="noopener noreferrer">
-              Open PayPal
-            </a>
-            <button class="action secondary" type="button"
-              onclick="copyEmail()">
-              Copy PayPal Email
-            </button>
-          </div>
-
+          <button class="action" type="submit"
+            onclick="setRequestType('PayPal payment instructions')">
+            Request PayPal Payment Details
+          </button>
           <p class="muted">
-            This opens PayPal; it is not an automatic checkout
-            or payment confirmation.
+            We will send you the appropriate PayPal payment
+            instructions by email. No payment is taken here.
           </p>
         </div>
 
@@ -477,28 +443,24 @@ h2 {
             Send us your details to request the correct
             transfer instructions.
           </p>
-
           <button class="action" type="submit"
             onclick="setRequestType('BMO USD bank transfer instructions')">
             Request BMO Transfer Details
           </button>
-
           <p class="muted">
-            Your request will be sent to traviscbuchanan@gmail.com.
             We will reply with the appropriate BMO USD transfer
             instructions. Transfer availability and fees depend
             on your bank and country.
           </p>
         </div>
-
       </div>
 
       <div class="notice">
-        After making a PayPal payment, please email your
-        business name, selected package and payment reference
-        to <strong>mainlinetrading@hotmail.com</strong>.
-        For bank transfers, submit the request above.
-        No payment is processed on this webpage.
+        All prices are in USD and packages are payable upfront.
+        After submitting your request, we will email you the
+        appropriate payment instructions. Advertising begins
+        after payment is confirmed and your creative is approved.
+        No payment is processed directly on this webpage.
       </div>
 
       <div class="buttons">
@@ -522,7 +484,6 @@ h2 {
 <script>
 let months = 6;
 let requestType = 'BMO USD bank transfer instructions';
-
 const prices = {3:60,6:40,12:30};
 
 function choose(n) {
@@ -536,24 +497,12 @@ function choose(n) {
   });
 }
 
-function copyEmail() {
-  const email = 'mainlinetrading@hotmail.com';
-  if (navigator.clipboard && navigator.clipboard.writeText) {
-    navigator.clipboard.writeText(email)
-      .then(() => alert('PayPal email copied.'))
-      .catch(() => prompt('Copy this PayPal email:',email));
-  } else {
-    prompt('Copy this PayPal email:',email);
-  }
-}
-
 function setRequestType(value) {
   requestType = value;
 }
 
 function prepareInquiry(event) {
   const form = document.getElementById('details');
-
   if (!form.reportValidity()) {
     event.preventDefault();
     return false;
