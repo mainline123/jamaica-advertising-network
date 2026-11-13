@@ -478,14 +478,17 @@ footer a {color:var(--gold)}
         instructions for our BMO USD business account.
       </p>
 
-      <form action="https://formsubmit.co/traviscbuchanan@gmail.com"
-        method="POST"
-        onsubmit="return prepareBMO()">
+      <form id="bmo-form" action="https://api.web3forms.com/submit"
+        method="POST" onsubmit="return submitBMO(event)">
 
-        <input type="hidden" name="_subject"
+        <input type="hidden" name="access_key"
+          value="1c442771-1a55-4db1-b1cd-6976c0d45d28">
+        <input type="hidden" name="subject"
           value="Jamaica Advertising Network - BMO Payment Request">
-        <input type="hidden" name="_template" value="table">
-        <input type="hidden" name="_captcha" value="true">
+        <input type="hidden" name="from_name"
+          value="Jamaica Advertising Network Website">
+        <input type="checkbox" name="botcheck"
+          style="display:none" tabindex="-1" autocomplete="off">
 
         <input type="hidden" name="Business name" id="bmo-business">
         <input type="hidden" name="Owner name" id="bmo-owner">
@@ -498,7 +501,11 @@ footer a {color:var(--gold)}
         <input type="hidden" name="Discount" id="bmo-discount">
         <input type="hidden" name="Total USD" id="bmo-total">
 
-        <button type="submit">Request BMO Transfer Details</button>
+        <button type="submit" id="bmo-button">
+          Request BMO Transfer Details
+        </button>
+        <p id="bmo-status" role="status" aria-live="polite"
+          style="margin:12px 0 0;line-height:1.6" hidden></p>
       </form>
 
       <p style="font-size:12px;color:#64787a">
@@ -651,6 +658,48 @@ function prepareBMO() {
     getTotal().toFixed(2);
 
   return true;
+}
+
+async function submitBMO(event) {
+  event.preventDefault();
+  if (!prepareBMO()) return false;
+
+  const form = document.getElementById('bmo-form');
+  const button = document.getElementById('bmo-button');
+  const status = document.getElementById('bmo-status');
+
+  button.disabled = true;
+  button.textContent = 'Sending...';
+  status.hidden = false;
+  status.style.color = '#092d35';
+  status.textContent = 'Submitting your BMO transfer request...';
+
+  try {
+    const response = await fetch(form.action, {
+      method: 'POST',
+      body: new FormData(form),
+      headers: { 'Accept': 'application/json' }
+    });
+
+    const result = await response.json();
+    if (!response.ok || !result.success) {
+      throw new Error(result.message || 'The request could not be sent.');
+    }
+
+    status.style.color = '#17633c';
+    status.textContent =
+      'Thank you! Your BMO transfer request has been submitted successfully. We will email you the payment instructions.';
+  } catch (error) {
+    status.style.color = '#a12b2b';
+    status.textContent =
+      'Your request could not be sent. Please try again shortly. ' +
+      (error.message || '');
+  } finally {
+    button.disabled = false;
+    button.textContent = 'Request BMO Transfer Details';
+  }
+
+  return false;
 }
 
 updatePackage();
