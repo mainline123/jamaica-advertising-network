@@ -18,7 +18,6 @@
   --cream:#faf8f2;
   --ink:#173139;
 }
-
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{
@@ -224,15 +223,21 @@ nav .highlight{color:var(--gold);font-weight:700}
   color:#d2e5e4;
   line-height:1.7;
 }
+
+/* CORRECTED PORTRAIT VIDEO */
+
 .japex-video{
   display:block;
   width:100%;
-  max-width:850px;
-  max-height:560px;
+  max-width:360px;
+  aspect-ratio:9/16;
+  height:auto;
   margin:22px auto 0;
   border-radius:12px;
   background:black;
+  object-fit:contain;
 }
+
 .japex-cta{
   text-align:center;
   margin-top:32px;
@@ -504,7 +509,7 @@ Take a closer look at Halifax Virtual Media Masters &amp; Events Ltd.'s technolo
   preload="metadata"
   playsinline
   poster="assets/20260915_160800_HDR.jpg">
-  <source src="assets/JAPEX_2026_compressed.mp4" type="video/mp4">
+  <source src="assets/JAPEX_2026_portrait.mp4" type="video/mp4">
   Your browser does not support HTML5 video.
 </video>
 
