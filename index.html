@@ -7,6 +7,16 @@
 <title>Jamaica Advertising Network | Halifax Virtual Media Masters</title>
 <meta name="description" content="Digital advertising opportunities in Negril, Montego Bay and Ocho Rios, Jamaica.">
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+<!-- Google tag supplied by Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtm.js?id=GTM-PPG2X2GP"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+</script>
+<!-- End Google tag -->
+
 <style>
 :root{--navy:#062c35;--teal:#087278;--gold:#eac36d;--cream:#faf8f2;--ink:#173139}
 *{box-sizing:border-box}
@@ -39,6 +49,7 @@ nav .highlight{color:var(--gold);font-weight:700}
 .gallery figure{margin:0;background:white;border:1px solid #dbe6e2;border-radius:16px;overflow:hidden;box-shadow:0 10px 32px #003b4213}
 .gallery img{display:block;width:100%;aspect-ratio:16/9;object-fit:contain;background:#e6f1ed}
 .gallery figcaption{padding:16px 20px;font-weight:700}
+.gallery figure:last-child{grid-column:1/-1;max-width:650px;justify-self:center;width:100%}
 .band{background:#e8f4f1}
 .price{font-size:39px;font-weight:700}
 .discount{margin:28px 0 0;background:#e9f5f2;border-radius:16px;padding:28px;text-align:center}
@@ -63,6 +74,7 @@ nav .highlight{color:var(--gold);font-weight:700}
 header{flex-direction:column}
 nav{justify-content:center;gap:15px}
 .destinations,.packages,.features,.gallery,.host-inner,.fields{grid-template-columns:1fr}
+.gallery figure:last-child{grid-column:auto}
 .shares{flex-direction:column}
 .hero{padding:70px 20px}
 .section{padding:50px 18px}
