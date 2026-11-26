@@ -4,705 +4,277 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Advertising Packages & Payments | Jamaica Advertising Network</title>
-<meta name="description" content="Advertise across Jamaica with flexible digital screen packages.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<title>Advertising Payments | VMM Jamaica</title>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
-
 <style>
 :root {
-  --deep:#062c35;
-  --teal:#086e72;
+  --navy:#062c35;
+  --teal:#087278;
   --gold:#eac36d;
   --cream:#faf8f2;
-  --ink:#092d35;
-  --line:#d9e4e1;
 }
 * {box-sizing:border-box}
-html {scroll-behavior:smooth}
-body {
-  margin:0;
-  background:var(--cream);
-  color:var(--ink);
-  font-family:'DM Sans',Arial,sans-serif;
-}
-header {
-  background:var(--deep);
-  padding:12px 4%;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  gap:20px;
-}
-.logo {
-  width:320px;
-  height:105px;
-  background:white;
-  border-radius:5px;
-  display:flex;
-  align-items:center;
-  overflow:hidden;
-  flex-shrink:0;
-}
-.logo img {
-  width:100%;
-  height:100%;
-  object-fit:contain;
-}
-nav {
-  display:flex;
-  gap:24px;
-  flex-wrap:wrap;
-}
-nav a {
-  color:white;
-  text-decoration:none;
-  font-size:14px;
-}
-nav a:hover {color:var(--gold)}
-.hero {
-  background:linear-gradient(120deg,#062c35,#08777a);
-  color:white;
-  text-align:center;
-  padding:75px 20px;
-}
-.eyebrow {
-  color:var(--gold);
-  text-transform:uppercase;
-  letter-spacing:3px;
-  font-size:12px;
-  font-weight:700;
-}
+body {margin:0;background:var(--cream);color:#173139;font-family:'DM Sans',Arial,sans-serif}
+header {background:var(--navy);color:white;padding:15px 5%;display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap}
+header img {width:190px;height:80px;object-fit:contain;background:white;border-radius:5px}
+nav {display:flex;gap:20px;flex-wrap:wrap}
+nav a {color:white;text-decoration:none;font-size:14px}
+.hero {background:linear-gradient(120deg,#062c35,#087278);color:white;text-align:center;padding:70px 20px}
 h1,h2,h3 {font-family:'Playfair Display',Georgia,serif}
-h1 {
-  font-size:clamp(36px,5vw,64px);
-  margin:16px 0;
-}
-.hero p {
-  font-size:18px;
-  line-height:1.7;
-  max-width:700px;
-  margin:auto;
-}
-.wrap {
-  max-width:1120px;
-  margin:auto;
-  padding:55px 20px;
-}
-h2 {
-  font-size:36px;
-  text-align:center;
-}
-.intro {
-  text-align:center;
-  color:#526a6e;
-  line-height:1.7;
-  margin-bottom:35px;
-}
-.plans {
-  display:grid;
-  grid-template-columns:repeat(3,minmax(0,1fr));
-  gap:20px;
-}
-.plan {
-  background:white;
-  padding:30px;
-  border:1px solid var(--line);
-  border-radius:16px;
-  text-align:center;
-  box-shadow:0 10px 30px #003b4210;
-}
-.plan.featured {border:2px solid #c79a3d}
-.tag {
-  background:#f8e8c2;
-  color:#654716;
-  padding:7px 12px;
-  border-radius:20px;
-  font-size:12px;
-  font-weight:700;
-  display:inline-block;
-}
-.plan h3 {font-size:28px}
-.price {font-size:43px;font-weight:700}
-.price small {
-  font-size:14px;
-  color:#64787a;
-  font-weight:400;
-}
-.total {
-  border-top:1px solid var(--line);
-  margin-top:20px;
-  padding-top:18px;
-  font-weight:700;
-}
-button {
-  background:var(--gold);
-  border:0;
-  border-radius:30px;
-  padding:14px 25px;
-  font:700 14px 'DM Sans',Arial,sans-serif;
-  color:#1d2929;
-  cursor:pointer;
-}
-button:hover {background:#f6d992}
-.plan button {margin-top:18px}
-.panel {
-  background:white;
-  border:1px solid var(--line);
-  border-radius:18px;
-  padding:35px;
-  margin-top:40px;
-}
-.panel h2 {text-align:left;font-size:31px}
-.screen-options {
-  display:grid;
-  grid-template-columns:repeat(3,minmax(0,1fr));
-  gap:15px;
-  margin:25px 0;
-}
-.screen-choice {
-  position:relative;
-  display:block;
-  border:2px solid var(--line);
-  border-radius:12px;
-  padding:22px 14px;
-  text-align:center;
-  cursor:pointer;
-  background:#fff;
-}
-.screen-choice:has(input:checked) {
-  border-color:var(--teal);
-  background:#e8f5f3;
-}
-.screen-choice input {
-  position:absolute;
-  top:12px;
-  left:12px;
-  accent-color:var(--teal);
-}
-.screen-choice strong {
-  display:block;
-  font-size:23px;
-  margin:8px 0;
-}
-.screen-choice span {
-  font-size:13px;
-  color:#526a6e;
-}
-.discount {
-  display:inline-block;
-  background:#f8e8c2;
-  color:#654716;
-  border-radius:20px;
-  padding:5px 10px;
-  font-size:12px;
-  font-weight:700;
-  margin-top:9px;
-}
-.selection {
-  background:#e8f5f3;
-  padding:22px;
-  border-radius:12px;
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:20px;
-  margin:25px 0;
-}
-.selection strong {
-  display:block;
-  font-size:21px;
-  margin-top:6px;
-}
-.savings {
-  color:#086e72;
-  font-weight:700;
-  font-size:14px;
-  margin-top:8px;
-}
-.fields {
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:18px;
-}
-.field {
-  display:flex;
-  flex-direction:column;
-  gap:7px;
-  font-size:14px;
-  font-weight:700;
-}
-.field input,.field textarea {
-  border:1px solid #bdcecb;
-  border-radius:8px;
-  padding:12px;
-  font:15px 'DM Sans',Arial,sans-serif;
-  width:100%;
-}
+.hero h1 {font-size:clamp(36px,5vw,60px);margin:10px 0}
+.hero p {font-size:18px;line-height:1.6}
+.gold {color:var(--gold)}
+.container {max-width:1150px;margin:auto;padding:55px 20px}
+h2 {font-size:36px;text-align:center}
+.intro {text-align:center;line-height:1.7;max-width:760px;margin:0 auto 30px;color:#53696d}
+.plans {display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.card,.panel {background:white;border:1px solid #dbe6e2;border-radius:16px;padding:28px;box-shadow:0 8px 25px #003b4210}
+.card {text-align:center}
+.card h3 {font-size:28px}
+.price {font-size:42px;font-weight:700;color:var(--navy)}
+.small {font-size:14px;color:#53696d;line-height:1.6}
+.btn {background:var(--gold);color:#173139;border:0;border-radius:30px;padding:14px 22px;font:700 14px 'DM Sans',Arial,sans-serif;cursor:pointer;display:inline-block;text-decoration:none;margin:8px 0}
+.btn:hover {background:#f6d992}
+.panel {margin-top:35px}
+.panel h2 {text-align:left;font-size:30px}
+.fields,.methods {display:grid;grid-template-columns:1fr 1fr;gap:18px;margin:20px 0}
+label {display:flex;flex-direction:column;gap:8px;font-size:14px;font-weight:700}
+input,select,textarea {width:100%;padding:13px;border:1px solid #b9ccca;border-radius:8px;font:inherit;background:white}
 .full {grid-column:1/-1}
-.methods {
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:18px;
-  margin-top:25px;
-}
-.method {
-  padding:24px;
-  border:1px solid var(--line);
-  border-radius:12px;
-  background:#fbfdfc;
-}
+.summary {background:#e8f4f1;padding:22px;border-radius:12px;line-height:1.8;margin:22px 0}
+.summary strong {font-size:24px}
+.method {background:#fafdfc;border:1px solid #dbe6e2;padding:22px;border-radius:12px}
 .method h3 {font-size:24px;margin-top:0}
-.method p {font-size:14px;line-height:1.7}
-.method button {margin-top:12px}
-.paypal-button {
-  background:#ffc439;
-  color:#003087;
-  width:100%;
-  font-size:16px;
-}
-.notice {
-  background:#fff8e8;
-  border-left:4px solid #d4a94b;
-  padding:17px;
-  margin-top:25px;
-  font-size:13px;
-  line-height:1.7;
-}
-footer {
-  background:var(--deep);
-  color:white;
-  text-align:center;
-  padding:30px;
-  font-size:13px;
-}
+.method p {line-height:1.7}
+.notice {background:#fff8e8;border-left:4px solid var(--gold);padding:18px;border-radius:8px;line-height:1.7;margin-top:20px}
+footer {background:var(--navy);color:white;text-align:center;padding:28px}
 footer a {color:var(--gold)}
 @media(max-width:780px) {
-  header {flex-direction:column}
-  .logo {width:280px;height:92px}
-  nav {justify-content:center;gap:14px}
-  .plans,.methods,.fields,.screen-options {
-    grid-template-columns:1fr;
-  }
-  .selection {grid-template-columns:1fr}
-  .panel {padding:22px}
-  .hero {padding:55px 18px}
+  .plans,.fields,.methods {grid-template-columns:1fr}
+  .full {grid-column:auto}
+  header {justify-content:center}
+  nav {justify-content:center}
 }
 </style>
 </head>
-
 <body>
+
 <header>
-  <a class="logo" href="index.html">
-    <img
-      src="assets/Halifax%20Virtual%20Media%20Masters%20Logo.png"
-      alt="Halifax Virtual Media Masters & Events Ltd.">
-  </a>
-  <nav>
-    <a href="index.html">Jamaica Network</a>
-    <a href="#packages">Packages</a>
-    <a href="#checkout">Payment Options</a>
-    <a href="index.html#contact">Contact</a>
-  </nav>
+<a href="index.html">
+<img src="assets/Halifax%20Virtual%20Media%20Masters%20Logo.png" alt="Halifax Virtual Media Masters official logo">
+</a>
+<nav>
+<a href="index.html">Home</a>
+<a href="index.html#screen-hosts">Screen Locations</a>
+<a href="index.html#packages">Packages</a>
+<a href="index.html#contact">Contact</a>
+</nav>
 </header>
 
 <section class="hero">
-  <div class="eyebrow">Jamaica Advertising Network</div>
-  <h1>Put Your Business in the Spotlight</h1>
-  <p>
-    Advertise on one screen or expand your reach across
-    multiple locations in Jamaica. Save an additional 10%
-    when you select 5 or 10 screens.
-  </p>
+<h1>Advertise Across <span class="gold">Negril, Jamaica</span></h1>
+<p>Affordable digital advertising across our growing network of hospitality and business locations.</p>
 </section>
 
-<main class="wrap">
+<main class="container">
 
-<section id="packages">
-  <h2>Choose Your Advertising Term</h2>
-  <p class="intro">
-    Select your advertising term, then choose how many
-    screens you would like. All prices are in USD.
-    The full campaign is payable upfront.
-  </p>
+<h2>Choose Your Advertising Package</h2>
+<p class="intro">All prices are in USD. Choose a 3-, 6-, or 12-month agreement. Payment is required upfront for the full contract term.</p>
 
-  <div class="plans">
-    <article class="plan">
-      <span class="tag">Get Started</span>
-      <h3>3 Months</h3>
-      <div class="price">$60 <small>USD/month per screen</small></div>
-      <div class="total">$180 USD per screen</div>
-      <p>One upfront payment for 3 months</p>
-      <button type="button" onclick="chooseTerm(3)">
-        Select 3 Months
-      </button>
-    </article>
+<div class="plans">
+<div class="card">
+<h3>3 Months</h3>
+<div class="price">$60</div>
+<p>USD per screen per month</p>
+<p class="small">15-second advertisement<br>From $180 prepaid</p>
+<button class="btn" onclick="choose(3)">Select 3 Months</button>
+</div>
 
-    <article class="plan featured">
-      <span class="tag">More Value</span>
-      <h3>6 Months</h3>
-      <div class="price">$40 <small>USD/month per screen</small></div>
-      <div class="total">$240 USD per screen</div>
-      <p>One upfront payment for 6 months</p>
-      <button type="button" onclick="chooseTerm(6)">
-        Select 6 Months
-      </button>
-    </article>
+<div class="card">
+<h3>6 Months</h3>
+<div class="price">$40</div>
+<p>USD per screen per month</p>
+<p class="small">15-second advertisement<br>From $240 prepaid</p>
+<button class="btn" onclick="choose(6)">Select 6 Months</button>
+</div>
 
-    <article class="plan">
-      <span class="tag">Best Monthly Rate</span>
-      <h3>12 Months</h3>
-      <div class="price">$30 <small>USD/month per screen</small></div>
-      <div class="total">$360 USD per screen</div>
-      <p>One upfront payment for 12 months</p>
-      <button type="button" onclick="chooseTerm(12)">
-        Select 12 Months
-      </button>
-    </article>
-  </div>
-</section>
+<div class="card">
+<h3>12 Months</h3>
+<div class="price">$30</div>
+<p>USD per screen per month</p>
+<p class="small">15-second advertisement<br>From $360 prepaid</p>
+<button class="btn" onclick="choose(12)">Select 12 Months</button>
+</div>
+</div>
+
+<div class="notice">
+<strong>Multi-Screen Savings:</strong> Receive 10% off when advertising on 3 or 6 screens. A 30-second advertisement costs twice the 15-second rate. All advertising placements are subject to screen availability.
+</div>
 
 <section class="panel" id="checkout">
-  <h2>Build Your Advertising Package</h2>
-  <p>Choose the number of screens for your campaign.</p>
+<h2>Advertising Package & Payment</h2>
+<p>Select your advertising options below. Your total payment will be calculated automatically.</p>
 
-  <div class="screen-options">
-    <label class="screen-choice">
-      <input type="radio" name="screens" value="1"
-        checked onchange="updatePackage()">
-      <strong>1 Screen</strong>
-      <span>Single-screen advertising</span>
-    </label>
+<div class="fields">
+<label>Contract term
+<select id="term" onchange="calculate()">
+<option value="3">3 Months</option>
+<option value="6" selected>6 Months</option>
+<option value="12">12 Months</option>
+</select>
+</label>
 
-    <label class="screen-choice">
-      <input type="radio" name="screens" value="5"
-        onchange="updatePackage()">
-      <strong>5 Screens</strong>
-      <span>Expand your advertising reach</span>
-      <div class="discount">SAVE 10%</div>
-    </label>
+<label>Number of screens
+<select id="screens" onchange="calculate()">
+<option value="1">1 Screen</option>
+<option value="3">3 Screens — 10% Discount</option>
+<option value="6">6 Screens — 10% Discount</option>
+</select>
+</label>
 
-    <label class="screen-choice">
-      <input type="radio" name="screens" value="10"
-        onchange="updatePackage()">
-      <strong>10 Screens</strong>
-      <span>Maximum network exposure</span>
-      <div class="discount">SAVE 10%</div>
-    </label>
-  </div>
+<label>Advertisement length
+<select id="duration" onchange="calculate()">
+<option value="15">15 Seconds</option>
+<option value="30">30 Seconds</option>
+</select>
+</label>
+</div>
 
-  <div class="selection">
-    <div>
-      Advertising package
-      <strong id="selected">6 Months · 1 Screen</strong>
-      <div id="rate-detail">Rate: $40 USD/month per screen</div>
-    </div>
-    <div>
-      Total amount due
-      <strong id="amount">$240.00 USD</strong>
-      <div class="savings" id="savings"></div>
-    </div>
-  </div>
+<div class="summary">
+<div id="selection">6 Months · 1 Screen · 15 Seconds</div>
+<div id="monthly">Monthly equivalent: $40.00 USD</div>
+<div id="discount">Discount: $0.00 USD</div>
+<strong id="total">Total Prepaid: $240.00 USD</strong>
+</div>
 
-  <h2>Customer Information</h2>
-  <p>Enter your business details before proceeding to payment.</p>
+<h2>Business Information</h2>
+<p>Complete your details to request BMO transfer instructions or send an advertising inquiry.</p>
 
-  <div class="fields">
-    <label class="field">
-      Business name *
-      <input id="business" required autocomplete="organization">
-    </label>
-    <label class="field">
-      Owner / contact name *
-      <input id="owner" required autocomplete="name">
-    </label>
-    <label class="field full">
-      Business address *
-      <input id="address" required autocomplete="street-address">
-    </label>
-    <label class="field">
-      Phone number *
-      <input id="phone" type="tel" required autocomplete="tel">
-    </label>
-    <label class="field">
-      Email address *
-      <input id="email" type="email" required autocomplete="email">
-    </label>
-    <label class="field full">
-      Business website or advertising details (optional)
-      <textarea id="details" rows="3"></textarea>
-    </label>
-  </div>
+<form id="businessForm" action="https://formsubmit.co/traviscbuchanan@gmail.com" method="POST" onsubmit="return prepareForm(event)">
+<input type="hidden" name="_subject" id="subject" value="VMM Jamaica Advertising Inquiry">
+<input type="hidden" name="_captcha" value="true">
+<input type="hidden" name="_template" value="table">
+<input type="hidden" name="Package" id="packageField">
+<input type="hidden" name="Amount USD" id="amountField">
+<input type="hidden" name="Request type" id="requestField">
 
-  <div class="methods">
-    <div class="method">
-      <h3>Pay Securely with PayPal</h3>
-      <p>
-        Pay for your complete advertising package in
-        US dollars through PayPal.
-      </p>
+<div class="fields">
+<label>Business Name *
+<input name="Business name" required>
+</label>
+<label>Owner / Contact Name *
+<input name="Contact name" required>
+</label>
+<label class="full">Business Address *
+<input name="Business address" required>
+</label>
+<label>Phone Number *
+<input name="Phone" type="tel" required>
+</label>
+<label>Email Address *
+<input name="email" type="email" required>
+</label>
+<label class="full">Advertising Details
+<textarea name="Advertising details" rows="4" placeholder="Tell us about your business or advertising campaign."></textarea>
+</label>
+</div>
 
-      <form id="paypal-form"
-        action="https://www.paypal.com/cgi-bin/webscr"
-        method="post"
-        target="_blank"
-        onsubmit="return preparePayPal()">
+<h2>Choose Your Payment Method</h2>
 
-        <input type="hidden" name="cmd" value="_xclick">
-        <input type="hidden" name="business"
-          value="mainlinetrading@hotmail.com">
-        <input type="hidden" name="currency_code" value="USD">
-        <input type="hidden" name="item_name" id="paypal-item"
-          value="Jamaica Advertising Network - 6 Months - 1 Screen">
-        <input type="hidden" name="amount" id="paypal-amount"
-          value="240.00">
-        <input type="hidden" name="no_shipping" value="1">
-        <input type="hidden" name="custom" id="paypal-reference">
+<div class="methods">
 
-        <button type="submit" class="paypal-button"
-          id="paypal-button">
-          Checkout with PayPal — $240.00 USD
-        </button>
-      </form>
+<div class="method">
+<h3>Pay with PayPal</h3>
+<p>Pay your selected advertising package in USD through PayPal.</p>
+<p><strong>PayPal recipient:</strong><br>mainlinetrading@hotmail.com</p>
+<a class="btn" href="https://www.paypal.com/" target="_blank" rel="noopener noreferrer">Open PayPal</a>
+<p class="small">Verify the recipient and payment amount before sending. This opens PayPal; it does not automatically process your selected package.</p>
+</div>
 
-      <p style="font-size:12px;color:#64787a">
-        You will be directed to PayPal to review
-        and complete your payment.
-      </p>
-    </div>
+<div class="method">
+<h3>BMO USD Bank Transfer</h3>
+<p>Prefer to pay by bank transfer? Request instructions for our BMO USD business account.</p>
+<button type="submit" class="btn" onclick="setRequest('BMO USD transfer instructions')">Request BMO Transfer Details</button>
+<p class="small">We will respond by email with the appropriate transfer information. No banking details are displayed publicly.</p>
+</div>
 
-    <div class="method">
-      <h3>Pay by BMO USD Bank Transfer</h3>
-      <p>
-        Prefer to pay by bank transfer? Request payment
-        instructions for our BMO USD business account.
-      </p>
+</div>
 
-      <form id="bmo-form" action="https://api.web3forms.com/submit"
-        method="POST" onsubmit="return submitBMO(event)">
+<div class="notice">
+<strong>Important:</strong> Advertising begins after payment confirmation, approval of your advertising content, and confirmation of screen availability. If paying through PayPal, please send your payment reference and business details to the PayPal recipient email shown above.
+</div>
 
-        <input type="hidden" name="access_key"
-          value="1c442771-1a55-4db1-b1cd-6976c0d45d28">
-        <input type="hidden" name="subject"
-          value="Jamaica Advertising Network - BMO Payment Request">
-        <input type="hidden" name="from_name"
-          value="Jamaica Advertising Network Website">
-        <input type="checkbox" name="botcheck"
-          style="display:none" tabindex="-1" autocomplete="off">
+<button type="submit" class="btn" onclick="setRequest('General advertising inquiry')">Send Advertising Inquiry</button>
 
-        <input type="hidden" name="Business name" id="bmo-business">
-        <input type="hidden" name="Owner name" id="bmo-owner">
-        <input type="hidden" name="Business address" id="bmo-address">
-        <input type="hidden" name="Phone" id="bmo-phone">
-        <input type="hidden" name="email" id="bmo-email">
-        <input type="hidden" name="Advertising details" id="bmo-details">
-        <input type="hidden" name="Package" id="bmo-package">
-        <input type="hidden" name="Screens" id="bmo-screens">
-        <input type="hidden" name="Discount" id="bmo-discount">
-        <input type="hidden" name="Total USD" id="bmo-total">
-
-        <button type="submit" id="bmo-button">
-          Request BMO Transfer Details
-        </button>
-        <p id="bmo-status" role="status" aria-live="polite"
-          style="margin:12px 0 0;line-height:1.6" hidden></p>
-      </form>
-
-      <p style="font-size:12px;color:#64787a">
-        We will email the appropriate USD transfer
-        instructions. No banking details are published here.
-      </p>
-    </div>
-  </div>
-
-  <div class="notice">
-    All advertising prices are in USD. Five-screen and
-    ten-screen packages receive an additional 10% discount
-    on the full advertising term. All packages are paid upfront.
-    Advertising begins after payment confirmation and approval
-    of the advertising creative.
-  </div>
+</form>
 </section>
 </main>
 
 <footer>
-  Halifax Virtual Media Masters & Events Ltd.
-  · Jamaica Advertising Network
-  <p><a href="index.html">Return to Jamaica Network</a></p>
+<p>© 2026 Halifax Virtual Media Masters &amp; Events Ltd.</p>
+<a href="index.html">Return to Jamaica Advertising Network</a>
 </footer>
 
 <script>
-let months=6;
-const prices={3:60,6:40,12:30};
+let requestType = "BMO USD transfer instructions";
 
-function getScreens() {
-  return Number(
-    document.querySelector('input[name="screens"]:checked').value
-  );
+function choose(months) {
+  document.getElementById("term").value = months;
+  calculate();
+  document.getElementById("checkout").scrollIntoView({behavior:"smooth"});
 }
 
-function getDiscount() {
-  return getScreens()>=5 ? 0.10 : 0;
+function calculate() {
+  const months = Number(document.getElementById("term").value);
+  const screens = Number(document.getElementById("screens").value);
+  const seconds = Number(document.getElementById("duration").value);
+  const rate = {3:60,6:40,12:30}[months];
+
+  const regularMonthly = rate * screens * (seconds / 15);
+  const discountRate = screens === 1 ? 0 : 0.10;
+  const savingsMonthly = regularMonthly * discountRate;
+  const monthly = regularMonthly - savingsMonthly;
+  const total = monthly * months;
+
+  document.getElementById("selection").textContent =
+    months + " Months · " + screens + " Screen(s) · " + seconds + " Seconds";
+
+  document.getElementById("monthly").textContent =
+    "Monthly equivalent: $" + monthly.toFixed(2) + " USD";
+
+  document.getElementById("discount").textContent =
+    "Discount: $" + (savingsMonthly * months).toFixed(2) + " USD";
+
+  document.getElementById("total").textContent =
+    "Total Prepaid: $" + total.toFixed(2) + " USD";
+
+  document.getElementById("packageField").value =
+    months + " months, " + screens + " screens, " + seconds + " seconds";
+
+  document.getElementById("amountField").value = total.toFixed(2);
+
+  return total;
 }
 
-function getSubtotal() {
-  return months*prices[months]*getScreens();
+function setRequest(type) {
+  requestType = type;
 }
 
-function getTotal() {
-  return Math.round(
-    getSubtotal()*(1-getDiscount())*100
-  )/100;
-}
-
-function money(value) {
-  return '$'+value.toFixed(2);
-}
-
-function chooseTerm(n) {
-  months=n;
-  updatePackage();
-  document.getElementById('checkout').scrollIntoView({
-    behavior:'smooth'
-  });
-}
-
-function updatePackage() {
-  const screens=getScreens();
-  const discount=getDiscount();
-  const total=getTotal();
-  const saved=getSubtotal()-total;
-
-  document.getElementById('selected').textContent=
-    months+' Months · '+screens+
-    (screens===1?' Screen':' Screens');
-
-  document.getElementById('rate-detail').textContent=
-    'Rate: $'+prices[months]+
-    ' USD/month per screen';
-
-  document.getElementById('amount').textContent=
-    money(total)+' USD';
-
-  document.getElementById('savings').textContent=
-    discount>0
-    ? '10% multi-screen discount: You save '+
-      money(saved)+' USD'
-    : 'Standard single-screen rate';
-
-  document.getElementById('paypal-button').textContent=
-    'Checkout with PayPal — '+money(total)+' USD';
-}
-
-function customer() {
-  return {
-    business:document.getElementById('business').value.trim(),
-    owner:document.getElementById('owner').value.trim(),
-    address:document.getElementById('address').value.trim(),
-    phone:document.getElementById('phone').value.trim(),
-    email:document.getElementById('email').value.trim(),
-    details:document.getElementById('details').value.trim()
-  };
-}
-
-function validateCustomer() {
-  const ids=['business','owner','address','phone','email'];
-  for(const id of ids) {
-    const field=document.getElementById(id);
-    if(!field.value.trim() || !field.checkValidity()) {
-      field.reportValidity();
-      field.focus();
-      return false;
-    }
-  }
-  return true;
-}
-
-function packageName() {
-  const screens=getScreens();
-  return months+' Months - '+screens+
-    (screens===1?' Screen':' Screens');
-}
-
-function preparePayPal() {
-  if(!validateCustomer()) return false;
-  const c=customer();
-
-  document.getElementById('paypal-item').value=
-    'Jamaica Advertising Network - '+packageName();
-
-  document.getElementById('paypal-amount').value=
-    getTotal().toFixed(2);
-
-  document.getElementById('paypal-reference').value=
-    (c.business+' - '+c.email).slice(0,100);
-
-  return true;
-}
-
-function prepareBMO() {
-  if(!validateCustomer()) return false;
-  const c=customer();
-
-  document.getElementById('bmo-business').value=c.business;
-  document.getElementById('bmo-owner').value=c.owner;
-  document.getElementById('bmo-address').value=c.address;
-  document.getElementById('bmo-phone').value=c.phone;
-  document.getElementById('bmo-email').value=c.email;
-  document.getElementById('bmo-details').value=c.details;
-  document.getElementById('bmo-package').value=packageName();
-  document.getElementById('bmo-screens').value=getScreens();
-  document.getElementById('bmo-discount').value=
-    (getDiscount()*100)+'%';
-  document.getElementById('bmo-total').value=
-    getTotal().toFixed(2);
-
-  return true;
-}
-
-async function submitBMO(event) {
-  event.preventDefault();
-  if (!prepareBMO()) return false;
-
-  const form = document.getElementById('bmo-form');
-  const button = document.getElementById('bmo-button');
-  const status = document.getElementById('bmo-status');
-
-  button.disabled = true;
-  button.textContent = 'Sending...';
-  status.hidden = false;
-  status.style.color = '#092d35';
-  status.textContent = 'Submitting your BMO transfer request...';
-
-  try {
-    const response = await fetch(form.action, {
-      method: 'POST',
-      body: new FormData(form),
-      headers: { 'Accept': 'application/json' }
-    });
-
-    const result = await response.json();
-    if (!response.ok || !result.success) {
-      throw new Error(result.message || 'The request could not be sent.');
-    }
-
-    status.style.color = '#17633c';
-    status.textContent =
-      'Thank you! Your BMO transfer request has been submitted successfully. We will email you the payment instructions.';
-  } catch (error) {
-    status.style.color = '#a12b2b';
-    status.textContent =
-      'Your request could not be sent. Please try again shortly. ' +
-      (error.message || '');
-  } finally {
-    button.disabled = false;
-    button.textContent = 'Request BMO Transfer Details';
+function prepareForm(event) {
+  if (!document.getElementById("businessForm").reportValidity()) {
+    event.preventDefault();
+    return false;
   }
 
-  return false;
+  calculate();
+  document.getElementById("requestField").value = requestType;
+  document.getElementById("subject").value =
+    "VMM Jamaica - " + requestType;
+
+  return true;
 }
 
-updatePackage();
+calculate();
 </script>
 </body>
 </html>
